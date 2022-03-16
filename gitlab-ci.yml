@@ -13,10 +13,10 @@ deploy:toGithub:
     - docker
   environment:
     name: github
-    url: https://github.com/SoftingIndustrial/datafeed-edge-configurator-840d
+    url: https://github.com/SoftingIndustrial/datafeed-edge-configurator-modbus
   script:
     - git lfs fetch --all
-    - git remote add public https://oauth2:${OAUTH2TOKEN}@github.com/SoftingIndustrial/datafeed-edge-configurator-840d.git
+    - git remote add public https://oauth2:${OAUTH2TOKEN}@github.com/SoftingIndustrial/datafeed-edge-configurator-modbus.git
     - git push public HEAD:refs/heads/${CI_COMMIT_REF_NAME}
   after_script:
     - git remote remove public
